@@ -1,0 +1,95 @@
+.yoga-project {
+    
+    #top-section {
+        position: relative;
+        min-height: 96.3rem;
+        min-width: 100vw;
+        background-image: url('../assets/top-shape.svg');
+        background-size: cover;
+        background-position: center bottom;
+        z-index: 1;
+    
+        #main-content {
+            display: grid;
+            align-items: end;
+            justify-items: center;
+            grid-template-rows: 190px 16rem 3rem 11rem min-content min-content;
+    
+            &__heading {
+                color: $s-color;
+               
+                .left-part {
+                    font-size: 12rem;
+                    font-family: 'formadjrmicro bold';
+                    line-height: 1;
+                    font-weight: bold;
+                }
+                .right-part {
+                    font-size: 12rem;
+                    font-family: 'formadjrmicro regular';
+                    line-height: 1;
+                    font-weight: 500;
+                }
+            }
+        
+            &__heading-line {
+                height: 0.3rem;
+                width: 100%;
+                max-width: 77.6rem;
+                background-color: white;
+            }
+        
+            &__sub-heading {
+                font-size: 4rem;
+                font-family: 'brevia medium';
+                line-height: 1;
+                font-weight: 500;
+                color: $p-color;
+                letter-spacing: -3px;
+            }
+        
+            &__desc {
+                font-size: 2.8rem;
+                font-family: 'brevia regular';
+                line-height: 1;
+                color: $p-color;
+                max-width: 90rem;
+                padding-top: 5rem;
+            }
+        
+            &__btn {
+                font-size: 3rem;
+                font-family: 'brevia regular';
+                padding: 0.4rem 2.5rem;
+                margin: 4rem 2rem 10rem 2rem;
+                max-width: 13rem;
+                line-height: 1;
+                background-color: $s-color;
+                cursor: pointer;
+            }
+        }
+    
+        @media screen and (max-width: 576px) {
+    
+            $font-size-top: 4.7rem;
+            #main-content {
+        
+                &__heading {
+                   
+                    .left-part {
+                        font-size: calc(12rem - #{$font-size-top});
+                    }
+                    .right-part {
+                        font-size: calc(12rem - #{$font-size-top});
+                    }
+                }
+            
+                &__heading-line {
+                    width: 90%;
+                }
+            
+            }
+    
+        }
+    }
+}

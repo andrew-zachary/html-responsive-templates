@@ -1,0 +1,101 @@
+#best-seller {
+    background-color: $restaurant-d-color;
+    
+    &__desc {
+        max-width: 125rem;
+        padding: 0rem 1.5rem;
+        display: grid;
+        grid-template-rows: repeat(3, min-content) 35rem;
+        align-items: end;
+        justify-items: center;
+        
+        h1 {
+            padding-top: 13rem;
+            font-family: 'gh regular';
+            font-size: 7.5rem;
+            line-height: 1.2;
+            color: $restaurant-a-color;
+        }
+
+        p {
+            max-width: 90.9rem;
+            padding-top: 2rem;
+            font-family: 'mon regular';
+            font-size: 2.523rem;
+            line-height: 1.2;
+            color: $restaurant-a-color;
+        }
+
+        ul {
+            width: 100%;
+            padding: 0rem 5.2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+            column-gap: 15rem;
+
+            li {
+                padding-top: 7.5rem;
+
+                img {
+                    width: 100%;
+                    max-width: 25rem;
+                }
+
+                h1 {
+                    padding-top: 0.1rem;
+                    font-family: 'gh regular';
+                    font-size: 4.167rem;
+                    line-height: 1.2;
+                    color: $restaurant-a-color;
+                }
+
+                p {
+                    padding-top: 1rem;
+                    font-family: 'mon regular';
+                    font-size: 2.5rem;
+                    line-height: 1.2;
+                    color: $restaurant-a-color;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        $font-best-seller-opt: 2rem;
+
+        &__desc {
+            padding: 0rem 1rem;
+
+            h1 {
+                font-size: calc(7.5rem + #{$font-best-seller-opt});
+            }
+    
+            p {
+                font-size: calc(2.523rem + #{$font-best-seller-opt});
+            }
+    
+            ul {
+                grid-template-columns: 1fr;
+                padding: 0rem;
+                column-gap: unset;
+    
+                li {
+    
+                    h1 {
+                        font-size: calc(4.167rem + #{$font-best-seller-opt});
+                    }
+    
+                    p {
+                        font-size: calc(1.685rem + #{$font-best-seller-opt});
+                        max-width: unset;
+                    }
+
+                    img {
+                        width: 80%;
+                        max-width: unset;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~swiper/swiper-bundle.min.css';
+@import '../assets/fonts.css';
+
+$burger-big-a-color:#FF9393;
+$burger-big-b-color:#FDDF5D;
+$burger-big-c-color:#FEF9F5;
+$burger-big-d-color:#3B3B3B;
+
+ul, p, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none!important;
+
+    &:hover {
+        color: unset;
+    }
+}
+
+html[prototype=burger-big] {
+    font-size: 62.5%;
+
+    @media screen and (max-width: 767px) {
+        font-size: 50%;
+    }
+}
+
+.burger-big-project {
+    position: relative;
+
+    &__btn {
+        background-color: $burger-big-a-color;
+        color: $burger-big-c-color;
+        height: 7.7rem;
+        width: 33.1rem;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+            font-family: 'mon bold';
+            font-size: 1.923rem;
+            line-height: 0;
+            text-transform: uppercase;
+        }
+    }
+
+    &__res-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@import './top-section';
+@import './burger-mid';
+@import './big-burger';
+@import './combos';
+@import './order-steps';
+@import './make-reservation';
+@import './about-us';
+@import './the_creators';
+@import './the-blog';
+@import './footer';

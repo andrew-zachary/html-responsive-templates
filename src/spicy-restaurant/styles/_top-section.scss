@@ -1,0 +1,75 @@
+#res-top-section {
+    position: relative;
+    background-color: $restaurant-a-color;
+    
+    .section-block {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        max-width: 144rem;
+        background-image: url('../assets/grand1-1.png');
+        background-position: left top;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &__text {
+            padding-top: 8.4rem;
+            padding-left: 1rem;
+            grid-column: 2 / 3;
+            display: grid;
+            grid-template-rows: repeat(3, min-content) 22.5rem;
+            align-items: end;
+            background-color: $restaurant-a-color;
+
+            .heading {
+                padding-top: 12.463rem;
+                font-family: 'gh regular';
+                font-size: 12.463rem;
+                line-height: 1.2;
+                color: $restaurant-b-color;
+            }
+
+            .desc {
+                padding-top: 1rem;
+                font-family: 'mon regular';
+                font-size: 2.972rem;
+                line-height: 1.2;
+                color: $restaurant-d-color;
+            }
+
+            .restaurant-project__btn {
+                margin-top: 8rem;
+            }
+        }
+
+        &__shap {
+            grid-column: 1 / 2;
+            background-image: url('../assets/shap7.svg');
+            background-repeat: no-repeat;
+            background-position: 35rem top;
+            background-size: contain;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+
+        .section-block {
+            grid-template-columns: 1fr;
+            background-size: cover;
+            background-position: center;
+
+            &__text {
+                padding-left: unset;
+                grid-column: 1 / -1;
+                background-color: rgba(47, 47, 47, 0.8);
+                justify-items: center;
+
+                .desc {
+                    text-align: center;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                    max-width: 99.2rem;
+                }
+            }
+        }
+    }
+}

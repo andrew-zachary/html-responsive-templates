@@ -1,0 +1,38 @@
+#book-your-table {
+  padding-bottom: 10rem;
+  form {
+    max-width: 78rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.8rem;
+    row-gap: 2.8rem;
+    padding-top: 8.3rem;
+    input {
+      font-family: Mon-R;
+      font-size: 1.6rem;
+      height: 6.4rem;
+      padding-left: 2rem;
+    }
+    .filled-btn {
+      font-family: MON-B;
+      font-size: 2rem;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    form {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    form {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      grid-template-columns: 1fr;
+      max-width: 57.6rem;
+      .filled-btn {
+        height: 6.4rem;
+      }
+    }
+  }
+}

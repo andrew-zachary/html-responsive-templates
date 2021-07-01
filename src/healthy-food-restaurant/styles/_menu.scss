@@ -1,0 +1,107 @@
+.healthy-food-project {
+    
+    .menu {
+        max-width: 1440px;
+        margin: 0 auto;
+        background-color: $healthy-food-a-color;
+        padding: 7rem 1.5rem 0rem 1.7rem;
+        width: 100%;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 29.8rem 1fr;
+        transition: background-color 0.3s linear;
+
+        &__logo {
+            width: 100%;
+            min-width: 23rem;
+            max-width: 30rem;
+            justify-self: center;
+        }
+        
+        &__links-list {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+    
+            li {
+                margin-right: 5.2rem;
+
+                &:last-child {
+                    margin-right: 0rem;
+                }
+    
+                a {
+                    font-size: 2.5rem;
+                    font-family: 'ubuntu medium';
+                    color: white;
+                    line-height: 1.2;
+                }
+            }
+        }
+    
+        &__trigger {
+            display: none;
+            justify-self: center;
+            align-items: center;
+            justify-items: center;
+            height: 3.5rem;
+            width: 5rem;
+            cursor: pointer;
+
+            span {
+                width: 100%;
+                height: 0.6rem;
+                background-color: white;
+                border-radius: 20%;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+
+            .collapse:not(.show) {
+                display: unset!important;
+            }
+        }
+    
+        @media screen and (max-width: 1000px) {
+            padding: 7rem 0rem 0rem 0.5rem;
+            grid-template-rows: repeat(2, min-content);
+            grid-template-columns: repeat(2, 1fr);
+
+            .menu-list-container {
+                grid-row: 2 / 3;
+                grid-column: 1 / -1;
+            }
+    
+            &__links-list {
+                padding-top: 6rem;
+                flex-direction: column;
+                overflow: hidden;
+                justify-content: flex-start;
+    
+                li {
+                    display: block;
+                    padding: 2rem 0;
+                    margin: unset;
+
+                    &:last-child {
+                        margin: unset;
+                    }
+
+                    a {
+                        font-size: 3rem;
+                    }
+                }
+            }
+    
+            &__trigger {
+                display: grid;
+            }
+        }
+
+        @media screen and (min-width: 1001px){
+            background-color: unset!important;
+            height: unset!important;
+        }
+    }
+}

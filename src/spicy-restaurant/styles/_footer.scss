@@ -1,0 +1,99 @@
+footer#restaurant-footer {
+    padding: 15rem 0rem 10rem 0rem;
+    max-width: 144rem;
+    background-color: $restaurant-a-color;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .left-part {
+        padding-left: 9rem;
+        padding-right: 2rem;
+        
+        h1 {
+            font-family: 'mon bold';
+            font-size: 2.5rem;
+            line-height: 1.2;
+            color: $restaurant-d-color;
+        }
+
+        p {
+            padding-top: 3rem;
+            max-width: 55rem;
+            font-family: 'mon regular';
+            font-size: 2.36rem;
+            line-height: 1.2;
+            color: $restaurant-d-color;
+        }
+
+        ul {
+            padding-top: 3rem;
+            max-width: 22rem;
+        }
+    }
+
+    .right-part {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+
+        .list-column {
+
+            h1 {
+                font-family: 'mon bold';
+                font-size: 2.5rem;
+                line-height: 1.2;
+                color: $restaurant-d-color;
+            }
+
+            ul {
+                padding-top: 2rem;
+                font-family: 'mon regular';
+                font-size: 2.36rem;
+                line-height: 1.762;
+                color: $restaurant-d-color;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: 1fr;
+        row-gap: 7rem;
+
+        .left-part {
+            padding: 0rem 3rem;
+
+            h1, p {
+                text-align: center;
+            }
+
+            ul {
+                margin: 0 auto;
+            }
+            
+            p {
+                max-width: unset;
+            }
+        }
+
+        .right-part {
+            width: 100%;
+            justify-self: center;
+            padding: 0rem 3rem;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+
+        .left-part {
+
+            ul {
+                max-width: 31.41rem;
+            }
+        }
+
+        .right-part {
+            grid-template-columns: 1fr;
+            row-gap: 5rem;
+        }
+    }
+}

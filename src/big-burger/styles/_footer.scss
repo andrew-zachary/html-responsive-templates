@@ -1,0 +1,226 @@
+.burger-big-project {
+
+    footer {
+        background-color: $burger-big-b-color;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        border-top: 0.5rem solid $burger-big-a-color;
+        padding-bottom: 5rem;
+    
+        h1 {
+            font-size: 2.006rem;
+            font-family: "mon bold";
+            line-height: 1.2;
+            color: $burger-big-d-color;
+        }
+    
+        p, li a {
+            font-size: 2.006rem;
+            font-family: "mon regular";
+            line-height: 1.2;
+            color: $burger-big-d-color;
+        }
+    
+        #right-part, #left-part {
+            padding-top: 6rem;
+    
+            .part-lead, .part-mid {
+                min-height: 15rem;
+    
+                .info-groub {
+                    width: 50%;
+                }
+            }
+    
+            .part-lead {
+                margin-bottom: 3rem;
+    
+                h1 {
+                    margin-bottom: 3rem;
+                }
+            }
+    
+            .part-mid {
+                margin-bottom: 0rem;
+    
+                h1 {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    
+        #left-part {
+            padding-left: 3rem;
+    
+            li {
+    
+                &#subscribe-row {
+                    justify-content: space-around;
+    
+                    input {
+                        width: 100%;
+                        max-width: 32.2rem;
+                        font-size: 1.272rem;
+                        font-family: "mon medium";
+                        line-height: 1.2;
+                        color: $burger-big-d-color;
+                        padding: 1.4rem 2rem 1.4rem 1.5rem;
+                        border-radius: 50px;
+                        border: 3px solid $burger-big-a-color;
+                        background-color: transparent;
+                    }
+        
+                    .section-btns {
+            
+                        .burger-big-project__btn {
+                            height: 5rem;
+                            width: 17.1rem;
+                            margin:0rem 1rem;
+            
+                            span {
+                                font-size: 1.272rem;
+                                font-family: "mon regular";
+                                line-height: 1.2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        #right-part {
+            width: 100%;
+    
+            li {
+    
+                &#socials {
+                    width: 100%;
+                    align-items: start;
+                    justify-content: start;
+    
+                    h1 {
+                        width: 50%;
+                        padding: 0;
+                    }
+    
+                    .social-list {
+                        width: 50%;
+                        justify-content: start;
+    
+                        li {
+                            margin-right: 2rem;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+    
+        }
+    
+        @media screen and (max-width: 992px) {
+    
+            #left-part {
+        
+                li {
+        
+                    &#subscribe-row {
+                        flex-direction: column;
+                        margin-top: 3rem;
+    
+                        input {
+                            width: 100%;
+                            max-width: unset;
+                            border-radius: unset;
+                            border: unset;
+                            border-bottom: 3px solid $burger-big-a-color;
+                        }
+            
+                        .section-btns {
+                            margin-top: 1rem;
+                            width: 100%;
+                
+                            .burger-big-project__btn {
+                                height: 5rem;
+                                width: 100%;
+                                background-color: unset;
+                                justify-content: flex-end;
+                
+                                span {
+                                    font-size: 1.272rem;
+                                    font-family: "mon bold";
+                                    line-height: 1.2;
+                                    color: $burger-big-d-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            #right-part {
+        
+                li {
+        
+                    &#socials {
+                        flex-direction: column;
+                        justify-content: start;
+        
+                        .social-list {
+                            justify-content: start;
+        
+                            li {
+                                margin-right: 1rem;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #left-part, #right-part {
+    
+                li {
+    
+                    &.part-end {
+                        
+                        h1 {
+                            margin-bottom: 3rem;
+                        }
+                    }
+    
+                    &.part-mid {
+                        flex-direction: column;
+                        min-height: 22rem;
+    
+                        div:first-child {
+                            margin-bottom: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    
+        @media screen and (max-width: 576px){
+            grid-template-columns: 1fr;
+    
+            #left-part, #right-part {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+    
+            #left-part {
+    
+                li {
+                    
+                    &#subscribe-row {
+                        margin-left:auto;
+                        margin-right:auto;
+                        max-width: 414px;
+                    }
+                }
+    
+            }
+        }
+    }
+}

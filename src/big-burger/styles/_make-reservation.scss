@@ -1,0 +1,95 @@
+#make-reservation {
+    background-color: $burger-big-a-color;
+
+    h1 {
+        font-size: 8.333rem;
+        font-family: "mon black";
+        line-height: 1;
+        color: $burger-big-b-color;
+        padding-top: 11rem;
+        margin-bottom: 8rem;
+        letter-spacing: 0.4rem;
+    }
+
+    ul {
+        width: 100%;
+        max-width: 133.6rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 10.9rem;
+        column-gap: 5rem;
+        padding:0rem 2rem;
+
+        li {
+            
+            input {
+                width: 100%;
+                font-size: 2.5rem;
+                font-family: "mon medium";
+                line-height: 1.2;
+                color: $burger-big-c-color;
+                padding: 0.7rem 2rem 0.7rem 3.5rem;
+                border-radius: 50px;
+                border: 3px solid $burger-big-c-color;
+                background-color: transparent;
+                
+                &.input-with-btn {
+                    width: calc(100% - 8rem);
+                    border-radius: 50px 0 0 50px;
+                    border-right: none;
+                }
+    
+            }
+    
+            span {
+                width: 8rem;
+                padding: 0.7rem;
+                border: 3px solid $burger-big-c-color;
+                border-radius: 0 50px 50px 0px;
+                border-left: none;
+                color: $burger-big-c-color;
+                cursor: pointer;
+
+                img.opt-margin {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    .section-btns {
+        height: 24rem;
+
+        .burger-big-project__btn {
+            height: 6.2rem;
+            width: 26.2rem;
+            background-color: $burger-big-c-color;
+
+            span {
+                font-size: 2.5rem;
+                font-family: "mon bold";
+                line-height: 1.2;
+                color: $burger-big-a-color;
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+
+        ul {
+            max-width: 57.6rem;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 1fr);
+            row-gap: 5rem;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        
+        h1 {
+            font-size: 11.50vw;
+        }
+    }
+    
+}

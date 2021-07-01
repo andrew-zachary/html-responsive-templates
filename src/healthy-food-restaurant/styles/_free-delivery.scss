@@ -1,0 +1,54 @@
+#free-delivery {
+    padding-bottom: 15rem;
+    background-image: url('../assets/food5-1.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+
+    h1 {
+        padding-top: 13rem;
+        font-family: 'ubuntu bold';
+        font-size: 8.067rem;
+        line-height: 1.2;
+        color: $healthy-food-a-color;
+    }
+
+    p {
+        padding-top: 3rem;
+        max-width: 80rem;
+        font-family: 'lato regular';
+        font-size: 2.917rem;
+        line-height: 1.2;
+        color: $healthy-food-a-color;
+    }
+
+    .section-btns {
+        padding-top: 10rem;
+        justify-content: center;
+
+        .healthy-food-project {
+
+            &__btn {
+                height: 10rem;
+                width: 44rem;
+    
+                span {
+                    font-family: 'ubuntu regular';
+                    font-size: 3rem;
+                    letter-spacing: 1rem;
+                }
+            }
+        }
+    }
+
+    &.animate__animated-free-delivery {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    @media screen and (max-width: 576px){
+        padding: 0rem 1rem 15rem 1rem
+    }
+}

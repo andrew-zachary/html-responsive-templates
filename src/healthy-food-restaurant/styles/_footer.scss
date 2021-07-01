@@ -1,0 +1,109 @@
+.healthy-food-project {
+
+    footer {
+        padding: 10rem 0rem 50rem 0rem;
+        margin-top: -20rem;
+        background-image: url('../assets/shape4.svg');
+        background-size: 100% contain;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        transform: rotate(180deg);
+        
+        .animate__animated-hfr-footer {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            opacity:0;
+        }
+        
+        .rotated-bg {
+            background-color: $healthy-food-a-color;
+            transform: rotate(-180deg);
+            max-width: 144rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .left-part {
+                padding-left: 9rem;
+                padding-right: 2rem;
+                
+                h1 {
+                    font-family: 'ubuntu bold';
+                    font-size: 2.5rem;
+                    line-height: 1.2;
+                    color: $healthy-food-e-color;
+                }
+    
+                p {
+                    padding-top: 3rem;
+                    max-width: 55rem;
+                    font-family: 'lato regular';
+                    font-size: 2.36rem;
+                    line-height: 1.2;
+                    color: $healthy-food-e-color;
+                }
+            }
+    
+            .right-part {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 2rem;
+    
+                .list-column {
+    
+                    h1 {
+                        font-family: 'ubuntu bold';
+                        font-size: 2.5rem;
+                        line-height: 1.2;
+                        color: $healthy-food-e-color;
+                    }
+    
+                    ul {
+                        padding-top: 2rem;
+                        font-family: 'lato regular';
+                        font-size: 2.36rem;
+                        line-height: 1.762;
+                        color: $healthy-food-e-color;
+                    }
+                }
+            }
+    
+            @media screen and (max-width: 1100px) {
+                grid-template-columns: 1fr;
+                row-gap: 7rem;
+    
+                .left-part {
+                    padding: 0rem 3rem;
+                    
+                    p {
+                        max-width: unset;
+                    }
+                }
+    
+                .right-part {
+                    width: 100%;
+                    justify-self: center;
+                    padding: 0rem 3rem;
+                }
+            }
+    
+            @media screen and (max-width: 576px) {
+    
+                .right-part {
+                    grid-template-columns: 1fr;
+                    row-gap: 5rem;
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px){
+            padding: 0rem 0rem 50rem 0rem;
+    
+            .rotated-bg {
+                padding: 0rem 0rem 10rem 0rem;
+            }
+        }
+    }
+
+}

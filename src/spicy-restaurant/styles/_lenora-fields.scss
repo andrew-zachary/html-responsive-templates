@@ -1,0 +1,39 @@
+#lenora-fields {
+    position: relative;
+    padding-bottom: 27rem;
+    background-image: url('../assets/grand1-1.png');
+    background-size: cover;
+    background-position: center;
+
+    .overlay {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 196, 0, 0.7);
+    }
+
+    p {
+        position: relative;
+        z-index: 2;
+    }
+
+    p:nth-child(1) {
+        max-width: 100rem;
+        padding: 26rem 2rem 0rem 2rem;
+        font-family: 'mon regular';
+        font-size: 4.49rem;
+        line-height: 1.2;
+        color: $restaurant-a-color;
+    }
+
+    p:nth-child(2) {
+        padding: 3rem 2rem 0rem 2rem;
+        font-family: 'gh regular';
+        font-size: 7.419rem;
+        line-height: 1.2;
+        color: $restaurant-a-color;
+    }
+}

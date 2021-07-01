@@ -1,0 +1,89 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '../assets/fonts.css';
+
+$p-color: #00C9D6;
+$s-color: #ffffff;
+$t-color: #3F505A;
+
+html[prototype=yoga] {
+    font-size: 62.5%;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 50%;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: 43.75%;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 37.5%;
+    }
+}
+
+.yoga-project {
+    position: relative;
+    overflow: hidden;
+    background-color: $s-color;
+
+    a {
+        text-decoration: none;
+    }
+
+    &__btn {
+        display: inline-block;
+
+        .btn-skele {
+            display: flex;
+            cursor: pointer;
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 5rem;
+                width: 16.5rem;
+                
+                line-height: 0;
+    
+                &.primary-style {
+                    font-family: 'formadjrmicro regular';
+                    font-size: 2.5rem;
+                    color: $t-color;
+                    background-color: $p-color;
+                    border-radius: 0.5rem;
+                }
+    
+                &.secondary-style {
+                    // background-color: $s-color;
+                    color: $p-color;
+                    font-family: "brevia regular";
+                    font-size: 2.917rem;
+                }
+            }
+    
+            img {
+                height: 4.7rem;
+                width: 4rem;
+                margin-right: 2.3rem;
+            }
+        }
+
+    }
+
+    &__res-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@import './menu';
+@import './top-section';
+@import './wings-section';
+@import './classes-lvls';
+@import './beginners-yoga';
+@import './first-class';
+@import './our-methodology';
+@import './yoga-therapy';
+@import './yoga-footer';

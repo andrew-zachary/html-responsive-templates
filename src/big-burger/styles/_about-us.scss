@@ -1,0 +1,67 @@
+#about-us {
+    
+    article {
+        background-color: $burger-big-b-color;
+        max-width: 144rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        h1 {
+            padding-top: 11rem;
+            font-size: 6.946rem;
+            font-family: "mon black";
+            line-height: 1.2;
+            color: $burger-big-a-color;
+        }
+    
+        p {
+            padding: 7rem 3rem 0rem 0rem;
+            max-width: 55.1rem;
+            font-size: 2.5rem;
+            font-family: "mon regular";
+            line-height: 1.2;
+
+            &:nth-child(3) {
+                padding: 3rem 3rem 7rem 0rem;
+            }
+        }
+
+        img {
+            padding-top: 5rem;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width:992px){
+        
+        article {
+            grid-template-columns: 1fr;
+            justify-items: center;
+
+            img {
+                padding: 0;
+            }
+
+            .desc {
+                margin-top: -15rem;
+
+                h1 {
+                    margin-top: 0;
+                    padding-top: 0;
+                    text-align: center;
+                }
+    
+                p {
+                    text-align: center;
+                    max-width: 90%;
+                    margin: 0 auto;
+
+                    &:nth-child(2), &:nth-child(3) {
+                        padding: 3rem 0rem;
+                    }
+                }
+            }
+        }
+    }
+    
+}

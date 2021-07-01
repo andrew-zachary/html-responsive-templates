@@ -1,0 +1,196 @@
+section#up-coming-events {
+  padding-bottom: 9rem;
+  #slides-section {
+    overflow: hidden;
+    #events-slides {
+      max-width: 144rem;
+      padding-top: 6rem;
+      display: flex;
+      li {
+        width: 100%;
+        img {
+          width: 100%;
+          height: 35rem;
+        }
+        .slide-container {
+          position: relative;
+          .image-cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &.active-slide {
+          width: 0;
+          z-index: 1;
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: auto;
+            transform: translate(-50%, -6.5%);
+            height: 40.5rem;
+            transition: left 0.3s cubic-bezier(0, 1.33, 0, 1.31);
+          }
+        }
+      }
+    }
+    #slides-ctrl {
+      height: 21rem;
+      padding: 7.5rem 0 0 0;
+      ul {
+        letter-spacing: 0;
+        word-spacing: 0;
+        font-size: 0;
+        text-align: center;
+        li {
+          margin: 0 2rem;
+          width: 2.7rem;
+          height: 2.7rem;
+          background: var(--sec-color);
+          border-radius: 25px;
+          display: inline-block;
+          cursor: pointer;
+          border: 1px solid black;
+          &.active {
+            background: var(--pri-color);
+          }
+        }
+      }
+    }
+  }
+  #events-grid {
+    max-width: 144rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.6rem;
+    #left-col,
+    #right-col {
+      .event-row {
+        height: 100%;
+        position: relative;
+        .text-box {
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: white;
+          h1 {
+            font-family: MON-B;
+            font-size: 2.5rem;
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    #left-col {
+      justify-self: end;
+      .text-box {
+        padding: 4rem;
+        h3 {
+          font-family: MON-B;
+          font-size: 4.1rem;
+          color: white;
+          width: 24rem;
+        }
+      }
+    }
+    #right-col {
+      justify-self: start;
+      display: grid;
+      row-gap: 3.6rem;
+      .text-box {
+        padding: 2.5rem 4rem;
+        h3 {
+          font-family: MON-B;
+          font-size: 3.3rem;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .section-desc {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+    #events-grid {
+      grid-template-columns: 1fr;
+      column-gap: unset;
+      #left-col,
+      #right-col {
+        justify-self: center;
+      }
+      #left-col {
+        padding-bottom: 3.6rem;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .section-desc {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    #slides-section {
+      #events-slides {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        li {
+          grid-row: 1 / span 1;
+          grid-column: 1 / span 1;
+          img {
+            height: unset;
+          }
+          &.active-slide {
+            height: unset;
+            width: 100%;
+            .image-cover {
+              display: none;
+            }
+            img {
+              width: 100%;
+              height: unset;
+              position: unset;
+              transform: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 415px) {
+    #events-grid {
+      #left-col,
+      #right-col {
+        .event-row {
+          .text-box {
+            h1 {
+              font-size: calc(
+                20px + (25 - 20) * ((100vw - 415px) / (768 - 415))
+              );
+            }
+          }
+        }
+      }
+      #left-col {
+        .text-box {
+          h3 {
+            font-size: calc(38px + (41 - 38) * ((100vw - 415px) / (768 - 415)));
+          }
+        }
+      }
+      #right-col {
+        .text-box {
+          h3 {
+            font-size: calc(25px + (33 - 25) * ((100vw - 415px) / (768 - 415)));
+          }
+        }
+      }
+    }
+  }
+}

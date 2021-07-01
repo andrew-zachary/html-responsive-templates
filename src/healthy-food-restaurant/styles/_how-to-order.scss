@@ -1,0 +1,94 @@
+#how-to-order {
+    overflow: hidden;
+    background-color: $healthy-food-a-color;
+    
+    h1 {
+        padding-top: 10rem;
+        font-family: 'ubuntu bold';
+        font-size: 4.5rem;
+        font-weight: 1.2;
+        color: $healthy-food-e-color;
+        letter-spacing: 0.2rem;
+    }
+
+    ul#steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, min-content) 12rem;
+        column-gap: 1rem;
+        max-width: 144rem;
+        width: 100%;
+
+        .order-step {
+            opacity: 0;
+            transform: translate(0, 10%);
+            transition: transform 0.4s ease-out, opacity 1s ease-out;
+        }
+
+        &.steps-stagger-list {
+
+            li {
+                opacity: 1;
+                transform: translate(0);
+
+                &:nth-child(1) {
+                    transition-delay: calc(0.25s * 1);
+                }
+                &:nth-child(2) {
+                    transition-delay: calc(0.25s * 2);
+                }
+                &:nth-child(3) {
+                    transition-delay: calc(0.25s * 3);
+                }
+            }
+        }
+
+        @media screen and (max-width: 1000px){
+            display: none;
+        }
+    }
+
+    .carousel {
+        max-width: 144rem;
+        padding-bottom: 5rem;
+        display: none;
+
+        .carousel-control-next, .carousel-control-prev {
+            bottom: 22rem;
+            transform: scale(2);
+        }
+        
+        @media screen and (max-width: 1000px){
+            display: block;
+        }
+    }
+    
+    ul#steps, .carousel-inner {
+        padding: 9rem 2rem 5rem 2rem;
+
+        .order-step {
+
+            span {
+                width: 10rem;
+                height: 10rem;
+                font-family: 'ubuntu bold';
+                font-size: 4.566rem;
+                font-weight: 1.2;
+                color: $healthy-food-a-color;
+                background-color: $healthy-food-e-color;
+            }
+
+            h1 {
+                padding-top: 5.5rem;
+            }
+
+            p {
+                font-family: 'lato regular';
+                font-size: 1.903rem;
+                font-weight: 1.2;
+                color: $healthy-food-e-color;
+                max-width: 41.4rem;
+            }
+        }
+    }
+}

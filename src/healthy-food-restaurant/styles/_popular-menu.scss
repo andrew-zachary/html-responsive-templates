@@ -1,0 +1,109 @@
+#popular-menu {
+    margin-top: -8rem;
+    padding-bottom: 15rem;
+    max-width: 144rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    h1 {
+        font-family: 'ubuntu bold';
+        font-size: 4.759rem;
+        line-height: 1.2;
+        color: $healthy-food-a-color;
+    }
+
+    #menu-list {
+        padding: 9rem 5rem 0 5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        justify-items: center;
+        column-gap: 10rem;
+        row-gap: 5rem;
+
+        &__item {
+            background-color: $healthy-food-e-color;
+            box-shadow: 0px 0px 1px 1px rgba(80, 79, 79, 0.4);
+
+            opacity: 0;
+            transform: translate(-10%, 0);
+            transition: transform 0.4s ease-out, opacity 1s ease-out;
+            
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            
+            .item-info {
+                padding-bottom: 3rem;
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+
+                h1 {
+                    padding-top: 1rem;
+                    font-family: 'ubuntu bold';
+                    font-size: 3.333rem;
+                    line-height: 1.2;
+                    color: $healthy-food-b-color;
+                }
+    
+                p {
+                    padding-top: 1rem;
+                    font-family: 'lato regular';
+                    font-size: 2.5rem;
+                    line-height: 1.2;
+                    color: $healthy-food-b-color;
+                }
+    
+                p.price {
+                    padding-top: 3.5rem;
+                    font-family: 'ubuntu bold';
+                    font-size: 2.795rem;
+                    line-height: 1.2;
+                    color: $healthy-food-b-color;
+                }
+            }
+        }
+
+        &.stagger-list {
+
+            li {
+                opacity: 1;
+                transform: translate(0);
+
+                &:nth-child(1) {
+                    transition-delay: calc(0.25s * 1);
+                }
+                &:nth-child(2) {
+                    transition-delay: calc(0.25s * 2);
+                }
+                &:nth-child(3) {
+                    transition-delay: calc(0.25s * 3);
+                }
+            }
+        }
+    }
+
+    #section-btns {
+        padding-top: 10rem;
+
+        .healthy-food-project__btn {
+    
+            span {
+                font-family: 'ubuntu medium';
+                font-size: 2.315rem;
+                line-height: 1.2;
+                color: $healthy-food-e-color;
+                letter-spacing: 0.5rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px){
+        margin-top: -20rem;
+        
+        #menu-list {
+            padding: 9rem 1rem 0 1rem;
+        }
+    }
+}

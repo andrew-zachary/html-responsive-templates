@@ -1,0 +1,94 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../assets/fonts.css";
+
+:root {
+  --pri-color: #fee243;
+  --sec-color: #eceaaa;
+}
+
+html[prototype="delicious-dishes"] {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  #guid {
+    min-width: 1440px;
+    min-height: 4170px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
+      ),
+      url(../assets/guide.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+  }
+}
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.section-padding {
+  padding-top: 7rem;
+}
+
+.section-intro-header {
+  font-family: Mon-B;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-header {
+  font-family: FG-R;
+  font-size: 5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-desc {
+  font-family: MON-R;
+  font-size: 1.6rem;
+  padding-top: 2rem;
+  text-align: center;
+  max-width: 108rem;
+  margin: 0 auto;
+}
+
+.dd-btn {
+  cursor: pointer;
+  span {
+    line-height: 0;
+    text-transform: uppercase;
+  }
+  &.outline-btn {
+    border: 1px solid black;
+  }
+  &.filled-btn {
+    background-color: var(--pri-color);
+  }
+}
+
+@import "./header";
+@import "./top";
+@import "./choose-and-enjoy";
+@import "./up-coming-events";
+@import "./book-your-table";
+@import "./footer.scss";

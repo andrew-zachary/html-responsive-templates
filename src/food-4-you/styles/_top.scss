@@ -1,0 +1,158 @@
+section#top {
+  background: linear-gradient(
+    102deg,
+    var(--pri-color) 66%,
+    var(--sec-color) 44%
+  );
+  overflow: hidden;
+  color: black;
+  #logo-phone-row {
+    position: relative;
+    z-index: 2;
+    padding: 3rem 1.5rem 0rem 1.5rem;
+    justify-content: space-between;
+    #phone {
+      min-width: 25rem;
+      justify-content: space-between;
+      #phone_num {
+        p:nth-child(1) {
+          font-size: 1.6rem;
+          font-family: MON-B;
+          text-align: right;
+        }
+        p:nth-child(2) {
+          font-size: 2.9rem;
+          font-family: MON-B;
+          line-height: 2rem;
+          text-align: right;
+        }
+      }
+    }
+  }
+  #top-container {
+    display: grid;
+    grid-template-columns: 64.5rem 1fr;
+    grid-template-rows: 65rem;
+    max-width: 144rem;
+    ul {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+      z-index: 1;
+      padding-top: 10rem;
+      li#title {
+        position: relative;
+        h1 {
+          font-family: Gab;
+          font-size: 5.9rem;
+          text-align: center;
+        }
+        img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform: translate(60%, -30%);
+        }
+      }
+      li#do-not-wait {
+        p {
+          font-family: FG-R;
+          font-size: 9rem;
+          text-align: center;
+        }
+      }
+      li#let-start {
+        text-align: center;
+        p {
+          font-family: MON-B;
+          font-size: 2.6rem;
+          line-height: 2rem;
+          padding-bottom: 4rem;
+          border-bottom: 1px solid black;
+          display: inline-block;
+        }
+      }
+      li#happy-monday {
+        font-family: FG-R;
+        padding-top: 2rem;
+        p:nth-child(1) {
+          padding-right: 0.5rem;
+          font-size: 1.9rem;
+        }
+        p:nth-child(2) {
+          padding-left: 1rem;
+          font-size: 5.6rem;
+        }
+      }
+      li.ctrls {
+        text-align: center;
+        padding-top: 2rem;
+        .outline-btn {
+          font-family: MON-EB;
+          font-size: 2rem;
+          padding: 1.2rem 4rem;
+        }
+      }
+    }
+    #hero-image-container {
+      position: relative;
+      height: 83rem;
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 1;
+      img {
+        position: absolute;
+        top: 40%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    #logo-phone-row {
+      justify-content: flex-end;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      background: hsla(0, 0%, 0%, 0.4);
+      color: white;
+      #logo,
+      #phone img {
+        display: none;
+      }
+      #phone {
+        justify-content: flex-end;
+        #phone_num {
+          p:nth-child(2) {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    #top-container {
+      grid-template-columns: 1fr;
+      ul {
+        li#title {
+          h1 {
+            font-size: calc(24px + (59 - 24) * ((100vw - 0px) / (768 - 0)));
+          }
+          img {
+            display: none;
+          }
+        }
+        li#do-not-wait {
+          p {
+            font-size: calc(18px + (90 - 18) * ((100vw - 0px) / (768 - 0)));
+          }
+        }
+        li#let-start {
+          p {
+            font-size: calc(10px + (26 - 10) * ((100vw - 0px) / (768 - 0)));
+          }
+        }
+      }
+      #hero-image-container {
+        grid-column: 2 / span 1;
+      }
+    }
+  }
+}

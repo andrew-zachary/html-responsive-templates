@@ -1,0 +1,89 @@
+#yoga-therapy {
+    position: relative;
+    z-index: 2;
+    transform: skew(0, 4.3deg);
+    margin-top: -100vh;
+
+    #yoga-therapy-cap {
+        height: 5rem;
+        width: 100%;
+        background-color: $t-color;
+    }
+
+    #yoga-therapy-content {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        grid-template-rows:repeat(3, min-content) 80rem;
+        justify-items: start;
+        background-image: url('../assets/yoga6-1.jpg');
+        background-position: left -3rem;
+        background-size: cover;
+
+        #yoga-therapy-topics {
+            padding-top: 8.5rem;
+            max-width: 37rem;
+            grid-column: 2 / 3;
+    
+            .topics__btn {
+                transform: skew(0, -4.3deg);
+    
+                .btn-skele {
+                    align-items: center;
+    
+                    img {
+                        transform: rotate(-65deg) scale(0.7);
+                        margin-right: 3.5rem;
+                    }
+    
+                    span {
+                        font-family: "formadjrmicro medium";
+                        font-size: 4.167rem;
+                        letter-spacing: 1rem;
+                        height: 6.5rem;
+                        color: $t-color;
+                    }
+                }
+            }
+        }
+    
+        #yoga-therapy-idea {
+            transform: skew(0, -4.3deg);
+            padding-top: 2rem;
+            grid-column: 2 / 3;
+            font-family: 'formadjrmicro medium';
+            font-size: 5rem;
+            color: $p-color;
+            
+            #yoga-therapy-line {
+                grid-column: 2 / 3;
+                height: 0.3rem;
+                width: 100%;
+                max-width: 32rem;
+                background-color: $p-color;
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px){
+        
+        #yoga-therapy-content {
+            background-position: -10rem -3rem;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        
+        #yoga-therapy-content {
+            background-position: -17rem -3rem;
+        }
+    }
+
+    @media screen and (max-width: 576px){
+        
+        #yoga-therapy-content {
+            grid-template-columns: 0.6fr 1.4fr;
+            background-position: -30rem -3rem;
+        }
+    }
+
+}

@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'gh regular';
+    src: url('./GrandHotel-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'mon bold';
+    src: url('./Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'mon medium';
+    src: url('./Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'mon regular';
+    src: url('./Montserrat-Regular.ttf');
+}

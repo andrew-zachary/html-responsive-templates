@@ -1,0 +1,166 @@
+#order-steps {
+    padding-bottom: 4rem;
+    background-color: $burger-big-b-color;
+
+    ul {
+        max-width: 108rem;
+        padding-top: 5rem;
+        justify-content: space-between;
+
+        li {
+            width: 35rem;
+            height: 35rem;
+            background-color: $burger-big-c-color;
+            box-shadow: 0.5rem 0.5rem 1.5rem 0.1rem #b66767;
+
+            h1 {
+                font-size: 4.583rem;
+                font-family: "mon bold";
+                line-height: 1;
+                color: $burger-big-a-color;
+            }
+
+            p {
+                max-width: 80%;
+                margin-top: 3rem;
+                font-size: 1.875rem;
+                font-family: "mon regular";
+                line-height: 1.2;
+            }
+        }
+    }
+
+    #plus-free-delivery {
+        height: 12.5rem;
+        max-width: 120rem;
+        padding-right: 3rem;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    #full-free-delivery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        img {
+            justify-self: center;
+            align-self: center;
+            width:100%;
+            max-width: 60.4rem;
+        }
+
+        #delivery-desc {
+            padding-left: 6rem;
+            padding-right: 3rem;
+
+            h1 {
+                font-size: 9.993rem;
+                font-family: "mon black";
+                line-height: 1;
+                color: $burger-big-c-color;
+            }
+
+            p {
+                margin-top: 4rem;
+                max-width: 52rem;
+                font-size: 2.498rem;
+                font-family: "mon regular";
+                line-height: 1.2;
+                color: $burger-big-c-color;
+            }
+
+            .section-btns {
+                justify-content: flex-start;
+
+                .burger-big-project__btn {
+                    width: 46.2rem;
+                    height: 6.2rem;
+                    margin-top: 4rem;
+
+                    span {
+                        font-size: 2.498rem;
+                        font-family: "mon regular";
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        
+        ul {
+            justify-content: center;
+            flex-wrap: wrap;
+
+            li {
+                margin-right: 1.5rem;
+                margin-left: 1.5rem;
+            }
+        }
+
+        #plus-free-delivery {
+            height: 15rem;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                margin-left: 30%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        
+        article {
+
+            &#full-free-delivery {
+                grid-template-columns: 1fr;
+
+                #delivery-desc {
+                    padding: 0;
+                    text-align: center;
+
+                    p {
+                        margin: 4rem auto 0rem auto;
+                    }
+
+                    
+                    .section-btns {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        ul {
+
+            li {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 479px) {
+     
+        #full-free-delivery {
+    
+            #delivery-desc {
+    
+                h1 {
+                    font-size: 17.87vw;
+                }
+
+                .section-btns {
+                    padding: 0rem 1rem;
+    
+                    .burger-big-project__btn {
+                        width: 100%;
+                        max-width: 46.2rem;
+                    }
+                }
+            }
+        }    
+    }
+}

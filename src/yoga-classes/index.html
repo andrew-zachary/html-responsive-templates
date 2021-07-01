@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html prototype=yoga lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="yoga-project">
+        <%= require(`html-loader!./partials/top-section.html`) %>
+            <%= require(`html-loader!./partials/wings-section.html`) %>
+                <%= require(`html-loader!./partials/classes-lvls.html`) %>
+                    <%= require(`html-loader!./partials/beginners-yoga.html`) %>
+                        <%= require(`html-loader!./partials/first-class.html`) %>
+                            <%= require(`html-loader!./partials/our-methodology.html`) %>
+                                <%= require(`html-loader!./partials/yoga-therapy.html`) %>
+                                    <%= require(`html-loader!./partials/yoga-footer.html`) %>
+    </div>
+</body>
+
+</html>

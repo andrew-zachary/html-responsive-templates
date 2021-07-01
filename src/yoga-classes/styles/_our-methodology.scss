@@ -1,0 +1,74 @@
+#our-methodology {
+    position: relative;
+    z-index: 2;
+    border-top: 6.5rem solid $p-color;
+    border-bottom: 100vh solid $t-color;
+    display: grid;
+    grid-template-rows: 11rem 1.8rem min-content 9rem 7rem;
+    align-items: end;
+    justify-items: center;
+    background-color: $t-color;
+
+    &__heading {
+        font-family: 'formadjrmicro medium';
+        font-size: 5.417rem;
+        color: $p-color;
+    }
+
+    &__heading-line {
+        width: 100%;
+        max-width: 45.7rem;
+        height: 0.4rem;
+        background-color: $p-color;
+    }
+
+    &__article {
+        max-width: 113rem;
+        padding-top: 4.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 9rem;
+        font-family: 'formadjrmicro regular';
+        font-size: 2.417rem;
+        color: $s-color;
+        line-height: 1.4;
+    }
+
+    &__btn {
+        position: relative;
+        z-index: 1;
+        font-size: 2.5rem;
+        font-family: 'brevia regular';
+        padding: 1rem 1.1rem;
+        max-width: 20rem;
+        line-height: 1;
+        background-color: $s-color;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 992px) {
+
+        &__article {
+            column-gap: unset;
+            grid-template-columns: unset;
+            grid-template-rows: repeat(2, min-content);
+            padding: 0 2rem;
+
+            p {
+                max-width: unset;
+                line-height: 1.2;
+                font-size: 2.3rem;
+    
+                &.para-left {
+                    padding: 2rem 0;
+                    grid-column: unset;
+                }
+    
+                &.para-right {
+                    padding: 2rem 0;
+                    grid-column: unset;
+                }
+            }
+        }
+    }
+}

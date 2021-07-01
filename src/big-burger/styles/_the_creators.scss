@@ -1,0 +1,125 @@
+#the-creators {
+    background-color: $burger-big-a-color;
+
+    article {
+        max-width: 120rem;
+        padding-top: 16rem;
+        padding-bottom: 14rem;
+        padding-left: 15rem;
+
+        h1 {
+            font-size: 6.946rem;
+            font-family: "mon black";
+            line-height: 1.2;
+            color: $burger-big-b-color;
+            letter-spacing: 0.4rem;
+        }
+
+        div {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+
+            img {
+                align-self: end;
+                justify-self: start;
+            }
+
+            ul {
+                padding-top: 5rem;
+                justify-self: start;
+
+                li {
+    
+                    div {
+                        max-width: 33rem;
+                        padding-left: 3rem;
+    
+                        h1 {
+                            font-size: 2.5rem;
+                            font-family: "mon bold";
+                            line-height: 1.2;
+                            color: $burger-big-c-color;
+                        }
+    
+                        p {
+                            padding-top: 3rem;
+                            font-size: 2.101rem;
+                            font-family: "mon regular";
+                            line-height: 1.2;
+                            color: $burger-big-c-color;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        margin-top: 3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        
+        article {
+            padding-left: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        
+        article {
+            padding-bottom: unset;
+
+            div {
+                display: grid;
+                grid-template-columns: 1fr;
+
+                ul {
+
+                    li {
+
+                        div {
+                            width: 100%;
+                            max-width: unset;
+                        }
+                    }
+                }
+
+                ul ~ img {
+                    margin: 5rem 0rem;
+                    justify-self: center;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:479px) {
+
+        article {
+            padding-left: 1rem;
+            padding-right: 1rem;
+    
+            div {
+
+                ul {
+
+                    li {
+
+                        img {
+                            align-self: start;
+                        }
+                    }
+                }
+    
+                & > img {
+                    width: 100%;
+                }
+            }
+
+            h1 {
+                font-size: 14.64vw;
+            }
+        }
+        
+    }
+}

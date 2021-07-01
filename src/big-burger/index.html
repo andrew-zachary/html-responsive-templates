@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" prototype=burger-big>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="burger-big-project">
+        <%= require(`html-loader!./partials/top-section.html`) %>
+            <%= require(`html-loader!./partials/burger-mid.html`) %>
+                <%= require(`html-loader!./partials/products-menu.html`) %>
+                    <%= require(`html-loader!./partials/combos.html`) %>
+                        <%= require(`html-loader!./partials/orders.html`) %>
+                            <%= require(`html-loader!./partials/make-reservation.html`) %>
+                                <%= require(`html-loader!./partials/about-us.html`) %>
+                                    <%= require(`html-loader!./partials/the-creators.html`) %>
+                                        <%= require(`html-loader!./partials/burger-blog.html`) %>
+                                            <%= require(`html-loader!./partials/burger-footer.html`) %>
+    </div>
+</body>
+
+</html>

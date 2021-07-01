@@ -1,0 +1,145 @@
+#wings-section {
+    background-image: url('../assets/yoga2-1.png');
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: $s-color;
+    height: 166rem;
+    margin-top: -35rem;
+
+    #wings-section-content {
+        display: grid;
+        align-items: end;
+        justify-items: center;
+        justify-content: center;
+        grid-template-rows: 55rem 2rem min-content 9rem;
+        max-width: 107.1rem;
+        margin: 0 auto;
+
+        &__heading {
+            display:flex;
+            align-items: center;
+
+            span {
+                font-family: "formadjrmicro medium";
+                font-size: 6.6rem;
+                color: $t-color;
+                letter-spacing: 1rem;
+                padding: 0rem 1.2rem;
+            }
+            img {
+                width: 4rem;
+                height: 4.7rem;
+
+                &:last-of-type {
+                    transform: scale(-1);
+                }
+            }
+        }
+    
+        &__line {
+            width: 100%;
+            max-width: 56rem;
+            height: 0.4rem;
+            background-color: $p-color;
+        }
+    
+        &__para {
+            display: grid;
+            column-gap: 7.2rem;
+            grid-template-columns: repeat(2, min-conent);
+            padding-top: 5rem;
+    
+            p {
+                font-family: "formadjrmicro medium";
+                font-size:2.917rem;
+                color:$t-color;
+                max-width: 55rem;
+                line-height: 1.2;
+    
+                &.left-para {
+                    grid-column: 1 / 2;
+                }
+    
+                &.right-para {
+                    grid-column: 2 / 3;
+                }
+            }
+        }
+    
+        &__btn {
+            font-family: "brevia regular";
+            font-size: 2.5rem;
+            color: $s-color;
+            padding: 0.8rem 2.5rem;
+            background: $t-color;
+            justify-self: end;
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        background-size: cover;
+    }
+
+    @media screen and (max-width: 768px) {
+        #wings-section-content {
+
+            &__para {
+                column-gap: unset;
+                grid-template-columns: unset;
+                grid-template-rows: repeat(2, min-content);
+                padding: 0 2rem;
+
+                p {
+                    max-width: unset;
+                    line-height: 1.2;
+                    font-size: 3.2rem;
+        
+                    &.left-para {
+                        padding: 2rem 0;
+                        grid-column: unset;
+                    }
+        
+                    &.right-para {
+                        padding: 2rem 0;
+                        grid-column: unset;
+                    }
+                }
+            }
+
+            &__btn {
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+
+        #wings-section-content {
+            position: relative;
+            z-index: 3;
+
+            &__heading {
+                $font-size-mob-wings: 0rem;
+    
+                span {
+                    font-size: calc(6.6rem - #{$font-size-mob-wings});
+                }
+                img {
+                    display: none;
+                    width: calc(4rem - #{$font-size-mob-wings});
+                    height: calc(4.7rem - #{$font-size-mob-wings});
+    
+                    &:last-of-type {
+                        transform: scale(-1);
+                    }
+                }
+            }
+
+            &__btn {
+                justify-self: center;
+            }
+        }
+    }
+}

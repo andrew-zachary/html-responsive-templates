@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html prototype="healthy-food" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="healthy_food_project" class="healthy-food-project">
+        <%= require(`html-loader!./partials/top-section.html`) %>
+            <%= require(`html-loader!./partials/popular-menu.html`) %>
+                <%= require(`html-loader!./partials/discount.html`) %>
+                    <%= require(`html-loader!./partials/how-to-order.html`) %>
+                        <%= require(`html-loader!./partials/free-delivery.html`) %>
+                            <%= require(`html-loader!./partials/testimonial.html`) %>
+                                <%= require(`html-loader!./partials/footer.html`) %>
+    </div>
+</body>
+
+</html>

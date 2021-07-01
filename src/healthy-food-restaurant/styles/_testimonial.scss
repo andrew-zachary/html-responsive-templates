@@ -1,0 +1,57 @@
+#testimonial {
+    padding: 0rem 1rem 0rem 1rem;
+
+    h1 {
+        padding-top: 15rem;
+        font-family: 'ubuntu bold';
+        font-size: 17.148rem;
+        line-height: 0;
+        color: $healthy-food-a-color;
+    }
+
+    p {
+        padding-top: 3rem;
+        max-width: 100rem;
+        font-family: 'lato regular';
+        font-size: 3.75rem;
+        line-height: 1.2;
+        color: $healthy-food-a-color;
+        text-align: center;
+        opacity: 0;
+    }
+
+    span {
+        padding-top: 3rem;
+        font-family: 'ubuntu bold';
+        font-size: 4.167rem;
+        line-height: 1.2;
+        color: $healthy-food-a-color;
+    }
+
+    ul {
+        padding: 5rem 0rem;
+
+        li {
+            margin: 1.5rem;
+            cursor: pointer;
+        }
+    }
+
+    .animate__animated-testimonial {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    @media screen and (max-width: 576px){
+        p {
+            font-size: 9vw;
+            text-align: left;
+        }
+
+        span { 
+            font-size: 10.5vw;
+        }
+    }
+}

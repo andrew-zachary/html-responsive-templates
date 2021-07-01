@@ -1,0 +1,185 @@
+#combos {
+    display: grid;
+    justify-items: center;
+    background: $burger-big-a-color;
+    position: relative;
+
+    &__header {
+        font-size: 8rem;
+        font-family: "mon black";
+        line-height: 1;
+        color: #FDDF5D;
+        letter-spacing: 1.5rem;
+        padding-top: 7rem;
+    }
+
+    &__para {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        font-size: 2.5rem;
+        font-family: "mon regular";
+        line-height: 1.2;
+        color: $burger-big-c-color;
+        padding-top: 3rem;
+    }
+
+    .swiper-main-container {
+        position: relative;
+        width: 100%;
+        max-width: 144rem;
+        margin: 10rem 0;
+
+        .swiper-button-next, .swiper-button-prev {
+            background-image: url('../assets/right-btn.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &::after {
+                content: "";
+            }
+        }
+
+        .swiper-button-prev {
+            transform: scale(-1);
+        }
+        
+        .swiper-container {
+            width: 100%;
+            max-width: 120rem;
+            padding: 2rem 1.8rem;
+
+            .swiper-wrapper {
+
+                .swiper-slide {
+                    padding-top: 5.5rem;
+                    padding-bottom: 5rem;
+                    border-radius: 5rem;
+                    background-color: $burger-big-c-color;
+                    box-shadow: 1rem 0.5rem 1.5rem 0.3rem #b66767;
+            
+                    h1 {
+                        font-size: 1.9rem;
+                        font-family: "mon bold";
+                        line-height: 1;
+                        margin-bottom: 3.5rem;
+                    }
+            
+                    ul li, span.price {
+                        font-size: 1.79rem;
+                        font-family: "mon regular";
+                        line-height: 1;
+                    }
+            
+                    span {
+                        margin-top: 3rem;
+                        color: $burger-big-a-color;
+                    }
+            
+                    li {
+            
+                        span {
+                            color: $burger-big-d-color;
+                        }
+                    }
+            
+                    li::after {
+                        content: "\B7";
+                        font-size: 1.79rem;
+                        height: 3rem;
+                        display: grid;
+                        align-items: center;
+                        justify-items: center;
+                    }
+            
+                    li:last-child:after {
+                        content: "";
+                    }
+            
+                    .section-btns {
+                        margin-top: 3rem;
+            
+                        .burger-big-project__btn {
+                            font-size: 1.587rem;
+                            font-family: "mon regular";
+                            line-height: 1.2;
+                            max-width: 18rem;
+                            height: 6.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 320px) {
+
+        .swiper-main-container {
+            width: 300px;
+    
+            .swiper-button-next, .swiper-button-prev {
+                top: 105%;
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 479px){
+        
+        &__header {
+            letter-spacing: 1rem;
+            font-size: 16.11vw;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+
+        .swiper-main-container {
+            width: 768px;
+    
+            .swiper-button-next, .swiper-button-prev {
+                top: 105%;
+            }
+    
+            .swiper-button-next {
+                left: 80%
+            }
+    
+            .swiper-button-prev {
+                left: 20%
+            }
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+
+        .swiper-main-container {
+            width: 1200px;
+    
+            .swiper-button-next, .swiper-button-prev {
+                top: 105%;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1336px) {
+
+        .swiper-main-container {
+
+            .swiper-button-next, .swiper-button-prev {
+                top: 50%;
+            }
+    
+            .swiper-button-next {
+                right: -40px;
+                left: auto;
+            }
+    
+            .swiper-button-prev {
+                right: auto;
+                left: -40px;
+            }
+        }
+
+    }
+}

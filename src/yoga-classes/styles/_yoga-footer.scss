@@ -1,0 +1,105 @@
+#yoga-footer {
+    position: absolute;
+    bottom: -95vh;
+    left: 0%;
+    z-index: 3;
+    margin-top: -12rem;
+    width: 100%;
+    
+    .yoga-footer__outer-frame {
+        transform: skew(0, -4deg);
+        background-color: $p-color;
+        
+        .yoga-footer__inner-frame {
+            transform: skew(0, 4deg);
+            border-bottom: 100vh solid $p-color;
+            max-width: 144rem;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 0.3fr 1fr 0.3fr 1fr;
+            grid-template-rows: min-content 4rem;
+            justify-items: center;
+            align-items: start;
+
+            .yoga-footer__btn {
+                grid-row: 1 / 2;
+
+                .btn-skele {
+                    align-items: center;
+        
+                    img {
+                        height: 2.82rem;
+                        width: 2.4rem;
+                        margin-right: 3.5rem;
+                    }
+        
+                    span {
+                        font-family: 'formadjrmicro medium';
+                        font-size: 2.917rem;
+                        color: $t-color;
+                        letter-spacing: 0.3rem;
+                    }
+                }
+            }
+    
+            article {
+                padding-top: 10rem;
+                max-width: 31rem;
+            
+                p {
+                    padding-top: 1rem;
+                    font-family: 'brevia medium';
+                    font-size: 2.083rem;
+                    color: $s-color;
+                }
+
+                ul {
+
+                    li {
+                        cursor: pointer;
+                    }
+                }
+            }
+        
+            #yoga-footer-line {
+                height: 6rem;
+                width: 0.6rem;
+                background-color: $s-color;
+                border-radius: 10px;
+                align-self: end;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        bottom: -100vh;
+
+        .yoga-footer__outer-frame {
+
+            .yoga-footer__inner-frame {
+                grid-template-columns: 1fr;
+                grid-template-rows: unset;
+                justify-items: start;
+                padding: 10rem 2rem 0 2rem;
+
+                article {
+                    padding: 0 2rem 5rem 0;
+                    max-width: unset;
+
+                    &:last-child {
+                        
+                        ul {
+                            max-width: 56.7rem;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+
+                #yoga-footer-line {
+                    display: none;
+                }
+            }
+        }
+    }
+
+}

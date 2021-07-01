@@ -1,0 +1,56 @@
+.healthy-food-project {
+
+    #top-section {
+        background-image: url('../assets/shape4.svg');
+        background-size: 100% contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        transition: height 1s linear;
+
+        .content {
+            max-width: 120rem;
+            display: grid;
+            grid-template-rows: repeat(3, min-content) 35rem;
+
+            h1 {
+                padding-top: 8rem;
+                font-family: 'ubuntu bold';
+                font-size: 10.298rem;
+                line-height: 1;
+                color: $healthy-food-e-color;
+            }
+
+            h3 {
+                padding-top: 5rem;
+                padding-bottom: 11rem;
+                max-width: 71rem;
+                font-family: 'lato regular';
+                font-size: 3.333rem;
+                line-height: 1.2;
+                color: $healthy-food-e-color;
+            }
+        }
+
+        .animate__animated-top-section {
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        @media screen and (max-width: 768px){
+            
+            .content {
+                $top-section-font-opt:4.8rem;
+    
+                h1 {
+                    font-size: 15vw;
+                }
+
+                h3 {
+                    font-size: 5vw;
+                }
+            }
+        }
+    }
+}

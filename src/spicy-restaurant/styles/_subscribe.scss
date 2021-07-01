@@ -1,0 +1,70 @@
+#subscribe {
+    padding-bottom: 32rem;
+    background-color: #F4F4F4;
+
+    h1 {
+        padding: 11rem 2rem 0rem 2rem;
+        font-family: 'gh regular';
+        font-size: 10rem;
+        line-height: 1.2;
+        color: $restaurant-a-color;
+    }
+
+    p {
+        padding: 3rem 2rem 0rem 2rem;
+        max-width: 90rem;
+        font-family: 'mon regular';
+        font-size: 2.972rem;
+        line-height: 1.2;
+        color: $restaurant-a-color;
+    }
+
+    .subscribe-form {
+        padding: 6rem 2rem 0rem 2rem;
+        display: flex;
+        justify-content: center;
+
+        input {
+            width: 100%;
+            max-width: 54rem;
+            background-color: $restaurant-d-color;
+            border: none;   
+            font-size: 2.5rem;
+            color: $restaurant-a-color;
+            padding-left: 2rem;
+            border: 1px solid rgba(47, 47, 47, 0.5);
+        }
+
+        .restaurant-project__btn {
+            height: 6.8rem;
+            width: 100%;
+            max-width: 22rem;
+            border-radius: 0px 5px 5px 0px;
+
+            span {
+                font-family: 'mon bold';
+                font-size: 2.5rem;
+                line-height: 1.2;
+                color: $restaurant-a-color;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-bottom: 15rem;
+
+        .subscribe-form {
+            display: block;
+
+            input {
+                display: block;
+                height: 6.8rem;
+                margin: 0 auto 2rem auto;
+            }
+    
+            .restaurant-project__btn {
+                margin: 0 auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'formadjrmicro bold';
+    src: url('./FormaDJRMicro-Bold_TRIAL.ttf');
+}
+@font-face {
+    font-family: 'formadjrmicro medium';
+    src: url('./FormaDJRMicro-Medium_TRIAL.ttf');
+}
+@font-face {
+    font-family: 'formadjrmicro regular';
+    src: url('./FormaDJRMicro-Regular_TRIAL.ttf');
+}
+@font-face {
+    font-family: 'brevia regular';
+    src: url('./Brevia-Regular.ttf');
+}
+@font-face {
+    font-family: 'brevia medium';
+    src: url('./Brevia-Medium.ttf');
+}

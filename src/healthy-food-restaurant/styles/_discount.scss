@@ -1,0 +1,126 @@
+#discount {
+    max-width: 144rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $healthy-food-e-color;
+
+    .discount-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        &__info {
+            background-color: $healthy-food-e-color;
+            padding-left: 5rem;
+            opacity:0;
+
+            h1 {
+                padding-top: 20rem;
+                font-family: 'ubuntu bold';
+                font-size: 5.833rem;
+                line-height: 1.2;
+                color: $healthy-food-b-color;
+            }
+
+            p {
+                padding-top: 4rem;
+                font-family: 'ubuntu regular';
+                font-size: 2.917rem;
+                line-height: 1.2;
+                color: $healthy-food-b-color;
+            }
+
+            .section-btns {
+                padding: 5.5rem 2rem;
+                justify-content: flex-start;
+
+                .healthy-food-project__btn {
+                    
+                    span {
+                        font-family: 'ubuntu regular';
+                    }
+                }
+            }
+        }
+    }
+
+    .animate__animated-discount {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    @media screen and (max-width: 1000px){
+
+        .discount-row {
+            grid-template-columns: 1fr;
+
+            img {
+                border-top: 1rem solid $healthy-food-a-color;
+            }
+
+            &__info {
+                
+                h1 {
+                    padding-top: 6rem;
+                }
+
+                .section-btns {
+                    justify-content: flex-end;
+
+                    .healthy-food-project__btn {
+                        background-color: $healthy-food-e-color;
+                        color: $healthy-food-a-color;
+
+                        span {
+                            &::after {
+                                content: "\00a0\00a0...";
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                
+                img {
+                    grid-row: 1 / 2;
+                }
+
+                .discount-row__info {
+                    grid-row: 2 / 3;
+                }
+            }
+
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .discount-row {
+            
+            &__info {
+                padding-left: 1rem;
+    
+                h1 {
+                    font-size: 5.833rem;
+                }
+    
+                p {
+                    font-size: 2.917rem;
+                }
+    
+                .section-btns {
+                    padding: 5.5rem 0rem;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

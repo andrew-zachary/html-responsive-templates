@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'FG-R';
+    src: url('./FrederickatheGreat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Gab';
+    src: url('./Gabelisa.ttf');
+}
+
+@font-face {
+    font-family: 'MON-R';
+    src: url('./Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'MON-B';
+    src: url('./Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'MON-EB';
+    src: url('./Montserrat-ExtraBold.ttf');
+}

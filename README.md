@@ -5,5 +5,5 @@
     cool responsive templates with animation and awesome features.
 </p>
 <p>
-    <a href="https://kind-ardinghelli-417e5c.netlify.app">Live View Here</a>
+    <a href="https://jovial-albattani-8035b4.netlify.app/">Live View Here</a>
 </p>
